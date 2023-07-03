@@ -5,7 +5,7 @@ cdkey_third = list(cdkey)[2]
 print("3rd digit:", cdkey_third)
 
 
-if int(cdkey_third) + 1 >= 10: # for 11key mod7s, the last digit is the 3rd + 1 or 2. There are no exceptions
+if int(cdkey_third) + 1 >= 10: # for 11key cdkey or sitenr, the last digit is the 3rd + 1 or 2. There are no exceptions
     cdkey_last = 0
     print("Last digit: ", cdkey_last)
 else:
