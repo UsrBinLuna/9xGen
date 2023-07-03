@@ -9,7 +9,7 @@ echo " "
 
 read -p "Input choice: " choice
 case $choice in
-    1) python 10key.py;;
-    2) python 11key.py;;
-    3) python oemkey.py;;
+    1) python mod7/10key.py;;
+    2) python mod7/11key.py;;
+    3) python mod7/oemkey.py;;
 esac
