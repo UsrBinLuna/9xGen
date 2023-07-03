@@ -16,31 +16,31 @@ def getyear(): # The year string must be 2 digits long. This function checks and
 
 year = getyear()
 
-def is_divisible_by_7(): # This function checks if Z is divisible by 7, which is required for the mod7 algo.
-    #print(z)
-    z_calc = [int(x) for x in str(z)]
-    #print("z_calc_: ", z_calc)
-    #print("z_calc length: ", len(z_calc))
-    if len(z_calc) != 6:
+def is_divisible_by_7(): # This function checks if mod7 is divisible by 7, which is required for the mod7 algo.
+    #print(mod7)
+    mod7_calc = [int(x) for x in str(mod7)]
+    #print("mod7_calc_: ", mod7_calc)
+    #print("mod7_calc length: ", len(mod7_calc))
+    if len(mod7_calc) != 6:
         return False
-    z_calc_end_float = str((z_calc[0] + z_calc[1] + z_calc[2] + z_calc[3] + z_calc[4] + z_calc[5]) / 7)
-    print("z_calc_end_float: ", z_calc_end_float)
-    z_calc_end_split = z_calc_end_float.split('.')
-    #print(z_calc_end_split)
+    mod7_calc_end_float = str((mod7_calc[0] + mod7_calc[1] + mod7_calc[2] + mod7_calc[3] + mod7_calc[4] + mod7_calc[5]) / 7)
+    print("mod7_calc_end_float: ", mod7_calc_end_float)
+    mod7_calc_end_split = mod7_calc_end_float.split('.')
+    #print(mod7_calc_end_split)
 
-    if len(z_calc_end_split[1]) != 1:
+    if len(mod7_calc_end_split[1]) != 1:
         return False
-    elif int(z_calc_end_split[1]) != 0:
+    elif int(mod7_calc_end_split[1]) != 0:
         return False
     else:
-        z_calc_end = z_calc_end_split[0]
-        print(z_calc_end_split, " has no decimal point!")
+        mod7_calc_end = mod7_calc_end_split[0]
+        print(mod7_calc_end_split, " has no decimal point!")
         return True
 
 
-z = random.randint(000000, 999999)
+mod7 = random.randint(000000, 999999)
 while not is_divisible_by_7():
-    z = random.randint(000000, 999999)
+    mod7 = random.randint(000000, 999999)
 
 c = random.randint(00000, 99999)
 while True:
@@ -50,10 +50,10 @@ while True:
         break
 
 
-key = f"Valid OEM Key: {day}{year}-OEM-0{z}-{c}"
+key = f"Valid OEM Key: {day}{year}-OEM-0{mod7}-{c}"
 
 
-print("day: ", day, ", year: ", year, ", z: ", z, ", c: ", c )
+print("day: ", day, ", year: ", year, ", mod7: ", mod7, ", c: ", c )
 
 print()
 print(key)
